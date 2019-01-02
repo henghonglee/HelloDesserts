@@ -20,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
     navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
     splitViewController.delegate = self
+    
+    // Test Code
+    let doughnut = Doughnut.init(topping: .strawberryFudge)
+    let doughnutDessert = Dessert.init(price: 5, calories: 500, type: .doughnut(doughnut))
+    
+    printDessert(doughnutDessert)
+    
     return true
   }
 
